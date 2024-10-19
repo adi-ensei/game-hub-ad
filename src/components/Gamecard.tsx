@@ -22,7 +22,8 @@ const GameCard = ({ game }: Props) => {
         <Image
           src={getCroppedImageUrl(game.background_image)}
           alt={game.name}
-          fallback={<Skeleton height="200px" />} // Placeholder while loading
+          fallback={<Skeleton height="200px" />}
+          borderRadius={10}
         />
         <CardBody>
           <Heading fontSize="2xl">{game.name}</Heading>
