@@ -21,7 +21,7 @@ const useData = <T>(
     () => {
       const controller = new AbortController();
       setLoading(true);
-
+      console.log(deps);
       apiClient
         .get<FetchResponse<T>>(endpoint, {
           signal: controller.signal,
@@ -29,6 +29,7 @@ const useData = <T>(
         })
         .then((res) => {
           setData(res.data.results);
+          console.log(data);
           setLoading(false);
         })
         .catch((err) => {
