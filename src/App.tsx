@@ -20,7 +20,7 @@ function App() {
   return (
     <Grid
       templateAreas={{
-        base: `"nav main"`,
+        base: `"nav" "main"`,
         lg: `" nav nav" "aside main  "`,
       }}
       templateColumns={{
@@ -33,7 +33,7 @@ function App() {
           onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
         />
       </GridItem>
-      <Show>
+      <Show above="lg">
         <GridItem area="aside" paddingX={5}>
           <GenreList
             selectedGenre={gameQuery.genre}
