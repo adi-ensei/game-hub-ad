@@ -9,9 +9,9 @@ import Navbar from "./components/Navbar";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { useState } from "react";
-                                              
+
 import PlatformSelector from "./components/PlatformSelector";
-import { Platform } from "./hooks/useGames";
+import { Platform } from "./hooks/usePlatforms";
 import { Genre } from "./hooks/useGenres";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
